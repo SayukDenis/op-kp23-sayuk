@@ -1,25 +1,26 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.3.32922.545
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework3", "Homework3\Homework3.csproj", "{EA5B16B8-1D9A-4ED3-9711-5EC49B246EE3}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{EA5B16B8-1D9A-4ED3-9711-5EC49B246EE3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EA5B16B8-1D9A-4ED3-9711-5EC49B246EE3}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EA5B16B8-1D9A-4ED3-9711-5EC49B246EE3}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EA5B16B8-1D9A-4ED3-9711-5EC49B246EE3}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {2985A2EE-D8A7-452D-B6C8-51DAD6E9E0A7}
-	EndGlobalSection
-EndGlobal
+namespace Practise1
+{
+    class Program
+    {
+
+        static void Main(string[] arg)
+        {
+            int x1 = 0;
+            int x2 = 0;
+            int y1 = 0;
+            int y2 = 0;
+            Console.WriteLine("Enter value for x1: ");
+            x1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value for y1: ");
+            y1 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value for x2: ");
+            x2 = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value for y2:");
+            y2 = Convert.ToInt32(Console.ReadLine());
+            double length = Math.Sqrt(Math.Pow((x2-x1),2) + Math.Pow((y2-y1),2));
+
+            Console.WriteLine("The length of vector is " + length);
+        }
+    }
+}
+
