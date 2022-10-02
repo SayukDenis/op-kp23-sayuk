@@ -1,25 +1,44 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.3.32922.545
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Homework2", "Homework2\Homework2.csproj", "{1132B4D8-F6C2-4886-BE3B-D0EB3B1DFEC1}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|Any CPU = Debug|Any CPU
-		Release|Any CPU = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{1132B4D8-F6C2-4886-BE3B-D0EB3B1DFEC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{1132B4D8-F6C2-4886-BE3B-D0EB3B1DFEC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{1132B4D8-F6C2-4886-BE3B-D0EB3B1DFEC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{1132B4D8-F6C2-4886-BE3B-D0EB3B1DFEC1}.Release|Any CPU.Build.0 = Release|Any CPU
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {84A413DD-9AA3-484E-938F-7C28A1591B1F}
-	EndGlobalSection
-EndGlobal
+namespace Practise1
+{
+    class Program
+    {
+
+        static void Main(string[] arg)
+        {
+            int a = 0;
+            int b = 0;
+            int c = 0;
+            Console.WriteLine("Enter value for a: ");
+            a = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value for b: ");
+            b = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter value for c: ");
+            c = Convert.ToInt32(Console.ReadLine());
+            if (a>0)
+            {
+                if (b > 0)
+                {
+                    if (c > 0)
+                    {
+                        double p = (a + b + c) / 2;
+                        double sum = Math.Sqrt(p * (p - a) * (p - c) * (p - b));
+                        Console.WriteLine("The area of ??a triangle according to the Heron formula:" + sum);
+                    }
+                    else
+                    {
+                        Console.WriteLine("The change c must be positive");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("The change b must be positive");
+                }
+            }
+            else
+            {
+                    Console.WriteLine("The change a must be positive");
+            }
+
+        }
+    }
+}
