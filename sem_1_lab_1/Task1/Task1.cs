@@ -3,7 +3,6 @@ class Program
 {
     private static void Main(string[] args)
     {
-
         /*a = 1.5,b = 1.2,dx = -0.05,x0 = -0.75,xk = -1.5,num = 1
            Expected results is:
            -0,8:   -0,7385540195105196
@@ -22,13 +21,20 @@ class Program
            -1,45:  -1,184753807555735
            -1,5:   -1,1925973589019838
         */
-        double a = 0;
-        double b = 0;
-        double dx = 0;
-        double x0 = 0;
-        double xk = 0;
+        double a = 1.5;
+        double b = 1.2;
+        double dx = -0.05;
+        double x0 = -0.75;
+        double xk = -1.5;
         double y, x;
-        int num = 0;
-        Console.WriteLine(x + ": \t" + y);
+        int num = 1;
+        for (double i = x0; i > xk; i += dx)
+        {
+            x = x0 + num * (xk - x0) / ((xk - x0) / dx);
+            y = 1.2 * Math.Pow((a - b), 3) * Math.Pow(Math.E, Math.Pow(x, 2)) + x;
+            num++;
+            Console.WriteLine(x + ": \t" + y);
+        }
+
     }
 }
