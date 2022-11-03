@@ -1,3 +1,4 @@
+using System;
 class Lab1
 {
     public static void Main(string[] args)
@@ -21,8 +22,22 @@ class Lab1
          * n= 16
          * Expected values is "not prime number"
          */
-        int n =0;
-        Console.WriteLine("It is not prime number");
+        int n;
+        Console.WriteLine("Enter the number");
+        bool nIsInt = int.TryParse(Console.ReadLine(), out n);
+        if (!nIsInt || n < 1)
+        {
+            Console.WriteLine("Enter the right number");
+            return;
+        }
+        for (int i = 2; i < n - 1; i++)
+        {
+            if (n % i == 0)
+            {
+                Console.WriteLine("It is not prime number");
+                return;
+            }
+        }
         Console.WriteLine("It is prime number");
     }
 }
